@@ -1,12 +1,19 @@
-var elSiteName = document.querySelector(".heading-js");
-var number = prompt("Biror son kiriting");
+var elSiteHeading = document.querySelector(".heading-js");
 
-if (number % 3 == 0){
-  elSiteName.textContent = "Fizz";
+function checkFizzBuzz(number){
+  if (number % 3 == 0 && number % 5 != 0){
+    elSiteHeading.textContent = "Fizz"
+    return elSiteHeading;
+  }
+  if (number % 5 == 0 && number % 3 != 0){
+    elSiteHeading.textContent = "Buzz"
+    return elSiteHeading;
+  }
+  if (number % 15 ==0){
+    elSiteHeading.textContent = "FizzBuzz"
+    return elSiteHeading;
+  }
 }
-if (number % 5 == 0){
-  elSiteName.textContent = "Buzz";
-}
-if (number % 15 == 0){
-  elSiteName.textContent = "Fizz Buzz";
-}
+num = prompt("son kiriting");
+
+console.log(checkFizzBuzz(num));
